@@ -5,5 +5,24 @@ function recordClick() {
 }
 
 function recordFunction(screenID) {
-    console.log("id : "+id);
+      navigator.webkitGetUserMedia({
+          audio : true,
+          video : {
+              mandatory : {
+                  chromeMediaSource : "desktop",
+                  chromeMediaSourceId : screenID
+              }
+          }
+      }, startStream, failedStream);
+}
+function startStream(stream) {
+    console.log('Stream Started');
+    var video = document.getElementById('videoID');
+    video.src = URL.createObjectURL(stream);
+    stream.onended = function() {
+        console.log('Stream Ended');
+    }
+}
+function failedStream() {
+    console.log('Got some Errors.');
 }

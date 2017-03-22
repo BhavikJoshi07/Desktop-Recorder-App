@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Desktop Recorder</title>
+    <style>
+        #videoID {
+            width: 1280px;
+            height : 720px;
+        }
+        #startRecording {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <video autoplay></video>
+    <video autoplay id="videoID"></video>
+    <br>
+    <br>
     <button id="startRecording">Start Capturing!</button>
     <script src="jquery.js"></script>
     <script src="app.js"></script>

@@ -6,7 +6,7 @@
   "version": "1.0",
   "app" : {
     "background" : {
-      "scripts" : ["jquery.js","background.js"]
+      "scripts" : ["background.js"]
     }
   },
   "icons" : {
